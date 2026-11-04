@@ -1,4 +1,8 @@
-public class Combustivel extends Item implements Perigoso{
+package model;
+
+import interfaces.Perigoso;
+
+public class Combustivel extends Item implements Perigoso {
     public Combustivel(String nome, double peso, double valorBase) {
         super(nome, peso, valorBase);
     }
@@ -9,7 +13,11 @@ public class Combustivel extends Item implements Perigoso{
     }
 
     @Override
-    public boolean verificarNecessidadeEscola() {
-        return false;
+    public boolean verificarNecessidadeEscolta() {
+        if (peso >= 500) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -1,7 +1,9 @@
+package model;
+
 public abstract class Item {
-    private String nome;
-    private double peso;
-    private double valorBase;
+    protected String nome;
+    protected double peso;
+    protected double valorBase;
 
     public Item(String nome, double peso, double valorBase) {
         this.nome = nome;
@@ -9,24 +11,12 @@ public abstract class Item {
         this.valorBase = valorBase;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public double getPeso() {
-        return peso;
-    }
-
     public void setPeso(double peso) {
         this.peso = peso;
-    }
-
-    public double getValorBase() {
-        return valorBase;
     }
 
     public void setValorBase(double valorBase) {
